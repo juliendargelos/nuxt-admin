@@ -20,6 +20,10 @@ npm install @juliendargelos/nuxt-admin --save
 
 Nuxt admin makes your static nuxt project able to edit data files through [Netlify CMS](https://www.netlifycms.org).
 
+I recommend using the [nuxt-data](https://github.com/juliendargelos/nuxt-data) package to manage yaml data files.
+
+Also see my [nuxt-starter](https://github.com/juliendargelos/nuxt-starter) which is an example using nuxt-admin and nuxt-data.
+
 > Read the [Netlify CMS documentation](https://www.netlifycms.org/docs/) for more informations.
 
 #### Add the module in your nuxt config:
