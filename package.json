@@ -1,0 +1,19 @@
+{
+  "name": "@juliendargelos/nuxt-admin",
+  "version": "1.0.0",
+  "description": "Admin module for nuxt using Netlify CMS.",
+  "main": "index.js",
+  "repository": "https://github.com/juliendargelos/nuxt-admin",
+  "author": "Julien Dargelos",
+  "license": "MIT",
+  "peerDependencies": {
+    "nuxt": "^2.4.5"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^5.0.1",
+    "fs-extra": "^7.0.1",
+    "js-yaml": "^3.12.2",
+    "netlify-cms": "^2.6.1",
+    "netlify-identity-widget": "^1.5.2"
+  }
+}
