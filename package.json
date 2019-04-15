@@ -1,6 +1,6 @@
 {
   "name": "@juliendargelos/nuxt-admin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Admin module for nuxt using Netlify CMS.",
   "main": "index.js",
   "repository": "https://github.com/juliendargelos/nuxt-admin",
