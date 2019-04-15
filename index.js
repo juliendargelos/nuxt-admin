@@ -14,7 +14,7 @@ export default function () {
     } = {}
   } = this.options
 
-  const config = new Config(new Builder(this.nuxt).getBundlerBuilder())
+  const config = new Config(new Builder(this.nuxt).getBundleBuilder())
   const { entry, output } = config.paths
 
   this.options.watch.push(path.join(entry, '**/*'))
