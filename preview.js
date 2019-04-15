@@ -5,22 +5,17 @@ export default class Preview extends React.Component {
   constructor(props) {
     super(props)
     this.vueElement = React.createRef()
-    this.vueNode = null
     this.data = null
     this.updateData()
-  }
-
-  static vueComponent = null
-
-  get vueComponent() {
-    return this.vueNode.componentInstance
+    console.log(this.constructor.vueComponent)
+    this.constructor.vueComponent.props = Object.keys(this.data)
   }
 
   componentDidMount() {
     this.vue = new Vue({
       el: this.vueElement.current,
       components: { Preview: this.constructor.vueComponent },
-      render: h => (this.vueNode = h('Preview', { props: this.data }))
+      render: h => h('Preview', { props: this.data })
     })
   }
 
@@ -50,8 +45,8 @@ export default class Preview extends React.Component {
 
   static retrieveAssets(getAsset, data) {
     Object.keys(data).forEach((key) => {
-      const value = data[key]
       let asset
+      const value = data[key]
 
       try {
         asset = getAsset(value)
@@ -72,6 +67,8 @@ export default class Preview extends React.Component {
   }
 
   static for(component) {
-    return class extends this { static vueComponent = component }
+    const preview = class extends this {}
+    preview.vueComponent = component
+    return preview
   }
 }
